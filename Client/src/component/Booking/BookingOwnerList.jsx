@@ -21,7 +21,7 @@ const BookingOwnerList = () => {
   const fetchUserId = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -43,7 +43,7 @@ const BookingOwnerList = () => {
   }, []);
   const fetchBookings = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/bookings/user`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bookings/user`, {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),
@@ -75,7 +75,7 @@ const BookingOwnerList = () => {
       );
 
       // API Request
-      const res = await fetch(`http://localhost:8000/api/v1/bookings/${id}`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bookings/${id}`, {
         method: "PUT",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),
@@ -115,7 +115,7 @@ const BookingOwnerList = () => {
 
   const deleteAppointement = async (id) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/bookings/${id}`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bookings/${id}`, {
         method: "DELETE",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),

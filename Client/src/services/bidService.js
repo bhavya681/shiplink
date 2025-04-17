@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000/api/v1/bids";
+const API_URL = "https://shiplink.onrender.com/api/v1/bids";
 
 // ✅ Fetch all bids for a shipment
 export const getBidsForShipment = async (shipmentId) => {

@@ -10,7 +10,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/v1/auth/user/profile", {
+        const res = await fetch("https://shiplink.onrender.com/api/v1/auth/user/profile", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

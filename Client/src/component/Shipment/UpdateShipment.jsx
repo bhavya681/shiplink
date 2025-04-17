@@ -21,7 +21,7 @@ const UpdateShipment = () => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/shipment/listing/${params.id}`,
+        `https://shiplink.onrender.com/api/v1/shipment/listing/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -78,7 +78,7 @@ const UpdateShipment = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/shipment/listing/edit/${params.id}`,
+        `https://shiplink.onrender.com/api/v1/shipment/listing/edit/${params.id}`,
         {
           method: "PUT",
           headers: {

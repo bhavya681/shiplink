@@ -22,7 +22,7 @@ const BidWars = () => {
   const getBidsForShipment = async (shipmentId) => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/bids/${shipmentId}`,
+        `https://shiplink.onrender.com/api/v1/bids/${shipmentId}`,
         {
           method: "GET",
           headers: {
@@ -51,7 +51,7 @@ const BidWars = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/${shipperId}`,
+        `https://shiplink.onrender.com/api/v1/auth/user/${shipperId}`,
         {
           method: "GET",
           headers: {
@@ -87,7 +87,7 @@ const BidWars = () => {
   const fetchUserRole = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -112,7 +112,7 @@ const BidWars = () => {
     try {
       setIsLoading(true);
       const res = await fetch(
-        `http://localhost:8000/api/v1/shipment/listing/shipment/${id}`,
+        `https://shiplink.onrender.com/api/v1/shipment/listing/shipment/${id}`,
         {
           method: "GET",
           headers: {
@@ -139,7 +139,7 @@ const BidWars = () => {
 
   const fetchDetails = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/bids/get/bids`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bids/get/bids`, {
         headers: {
           method: "GET",
           headers: {
@@ -163,7 +163,7 @@ const BidWars = () => {
 
   const fetchBids = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/bids/get/bids`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bids/get/bids`, {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),

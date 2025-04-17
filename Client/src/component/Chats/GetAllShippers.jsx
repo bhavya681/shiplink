@@ -14,7 +14,7 @@ const GetAllShippers = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/auth/users`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/auth/users`, {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),
@@ -32,7 +32,7 @@ const GetAllShippers = () => {
 
   const fetchCurrentUsers = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/auth/user/profile`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/auth/user/profile`, {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),

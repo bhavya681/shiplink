@@ -20,7 +20,7 @@ const BookingGets = () => {
   const fetchUserId = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -42,7 +42,7 @@ const BookingGets = () => {
   }, []);
   const fetchBookings = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v1/bookings/shipper", {
+      const res = await fetch("https://shiplink.onrender.com/api/v1/bookings/shipper", {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),

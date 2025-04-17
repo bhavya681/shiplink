@@ -347,7 +347,7 @@ const SignUp = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/auth/user/register",
+        "https://shiplink.onrender.com/api/v1/auth/user/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -9,7 +9,7 @@ const BidForm = ({ shipmentId, onBidPlaced }) => {
 
   const placeBid = async (shipmentId, amount) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/bids/${shipmentId}`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bids/${shipmentId}`, {
         method: "POST",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),

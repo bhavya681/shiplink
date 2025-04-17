@@ -31,7 +31,7 @@ const MyShipment = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:8000/api/v1/shipment/listing/all/mine",
+        "https://shiplink.onrender.com/api/v1/shipment/listing/all/mine",
         {
           method: "GET",
           headers: {
@@ -65,7 +65,7 @@ const MyShipment = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/shipment/listing/delete/${id}`,
+        `https://shiplink.onrender.com/api/v1/shipment/listing/delete/${id}`,
         {
           method: "DELETE",
           headers: {

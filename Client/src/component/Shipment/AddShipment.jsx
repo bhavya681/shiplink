@@ -63,7 +63,7 @@ const AddShipment = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:8000/api/v1/shipment/listing/post",
+        "https://shiplink.onrender.com/api/v1/shipment/listing/post",
         {
           method: "POST",
           headers: {

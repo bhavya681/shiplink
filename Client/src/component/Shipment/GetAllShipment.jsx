@@ -52,7 +52,7 @@ const GetAllShipment = () => {
   const fetchUserId = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -78,7 +78,7 @@ const GetAllShipment = () => {
   const fetchShipments = async () => {
     try {
       const res = await fetch(
-        "http://localhost:8000/api/v1/shipment/listing/all",
+        "https://shiplink.onrender.com/api/v1/shipment/listing/all",
         {
           method: "GET",
           headers: {

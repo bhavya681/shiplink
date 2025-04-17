@@ -255,7 +255,7 @@ const EditProfile = () => {
         }
 
         const res = await fetch(
-          "http://localhost:8000/api/v1/auth/user/profile",
+          "https://shiplink.onrender.com/api/v1/auth/user/profile",
           {
             method: "GET",
             headers: {
@@ -314,7 +314,7 @@ const EditProfile = () => {
       }
 
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/edit/${id}`,
+        `https://shiplink.onrender.com/api/v1/auth/user/edit/${id}`,
         {
           method: "PUT",
           headers: {

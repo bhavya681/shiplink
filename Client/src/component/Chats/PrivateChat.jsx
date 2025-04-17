@@ -25,7 +25,7 @@ import { BiMicrophone } from "react-icons/bi";
 import EmojiPicker from "emoji-picker-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const socket = io("http://localhost:8000", {
+const socket = io("https://shiplink.onrender.com", {
   transports: ["websocket", "polling"],
 });
 
@@ -57,7 +57,7 @@ const PrivateChat = () => {
   const fetchCurrentUser = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -116,7 +116,7 @@ const PrivateChat = () => {
   const fetchReceiverDetails = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/${user2}`,
+        `https://shiplink.onrender.com/api/v1/auth/user/${user2}`,
         {
           method: "GET",
           headers: {
@@ -139,7 +139,7 @@ const PrivateChat = () => {
   const fetchMessages = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/chats/private/${user1}/${user2}`,
+        `https://shiplink.onrender.com/api/v1/chats/private/${user1}/${user2}`,
         {
           method: "GET",
           headers: {
@@ -180,7 +180,7 @@ const PrivateChat = () => {
     socket.emit("sendMessage", messageData);
 
     try {
-      await fetch(`http://localhost:8000/api/v1/chats/`, {
+      await fetch(`https://shiplink.onrender.com/api/v1/chats/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

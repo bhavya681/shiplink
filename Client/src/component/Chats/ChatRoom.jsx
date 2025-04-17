@@ -8,8 +8,8 @@ import { Smile, SmileIcon } from "lucide-react";
 import { BiSmile } from "react-icons/bi";
 import { FaRegSmileWink } from "react-icons/fa";
 
-const SOCKET_URL = "http://localhost:8000";
-const API_URL = "http://localhost:8000/api/v1/community";
+const SOCKET_URL = "https://shiplink.onrender.com";
+const API_URL = "https://shiplink.onrender.com/api/v1/community";
 
 const CommunityChat = () => {
   const [messages, setMessages] = useState([]);
@@ -34,7 +34,7 @@ const CommunityChat = () => {
     const fetchUser = async () => {
       try {
         const res = await fetch(
-          "http://localhost:8000/api/v1/auth/user/profile",
+          "https://shiplink.onrender.com/api/v1/auth/user/profile",
           {
             headers: { "auth-token": token },
           }

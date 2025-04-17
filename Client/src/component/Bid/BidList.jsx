@@ -132,7 +132,7 @@ const [userRole, setUserRole] = useState("");
   const fetchUserRole = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/auth/user/profile`,
+        `https://shiplink.onrender.com/api/v1/auth/user/profile`,
         {
           method: "GET",
           headers: {
@@ -154,7 +154,7 @@ const [userRole, setUserRole] = useState("");
   const getBidsForShipment = async (shipmentId) => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/v1/bids/${shipmentId}`,
+        `https://shiplink.onrender.com/api/v1/bids/${shipmentId}`,
         {
           method: "GET",
           headers: {

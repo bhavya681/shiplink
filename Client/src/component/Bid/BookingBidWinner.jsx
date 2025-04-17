@@ -11,7 +11,7 @@ const BookingBidWinner = () => {
   useEffect(() => {
     const autoRequestShipment = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/v1/bookings/apply`, {
+        const res = await fetch(`https://shiplink.onrender.com/api/v1/bookings/apply`, {
           method: "POST",
           headers: {
             "auth-token": localStorage.getItem("auth-token"),

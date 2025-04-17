@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/v1/auth/user/reset-password",
+      const res = await fetch("https://shiplink.onrender.com/api/v1/auth/user/reset-password",
         {
           method: "POST",
           headers: {

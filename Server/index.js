@@ -18,6 +18,7 @@ import path from "path";
 
 const app = express();
 app.use(express.json());
+const corsOptions={origin:"https://shiplink.onrender.com",credentails:true};
 app.use(cors());
 dotenv.config();
 

@@ -102,7 +102,7 @@ const BidManagement = ({ selectedBidId, onActionCompleted }) => {
       setLoading(true);
       setAction(actionType);
 
-      const res = await fetch(`http://localhost:8000/api/v1/bids/${selectedBidId}/${actionType}`, {
+      const res = await fetch(`https://shiplink.onrender.com/api/v1/bids/${selectedBidId}/${actionType}`, {
         method: "PUT",
         headers: {
           "auth-token": localStorage.getItem("auth-token"),
